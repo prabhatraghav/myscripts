@@ -1,5 +1,5 @@
 # For UBUNTU (tested on Ubuntu-22.04-LTS/Ubuntu-24.04-LTS)
-# sudo wget https://raw.githubusercontent.com/prabhatraghav/myscripts/master/docker.sh
+# sudo wget https://raw.githubusercontent.com/prabhatraghav/myscripts/main/docker.sh
 # sudo chmod +x docker.sh
 # sudo sh docker.sh
 
