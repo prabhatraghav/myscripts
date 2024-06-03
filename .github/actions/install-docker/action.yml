@@ -31,6 +31,8 @@ runs:
         else
           sudo apt-get install -y docker-ce=${{ inputs.docker_version }} docker-ce-cli=${{ inputs.docker_version }} containerd.io docker-buildx-plugin docker-compose-plugin
         fi
+
     - name: Verify Docker installation
+      shell: bash
       run: |
         sudo docker --version
