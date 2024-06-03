@@ -1,0 +1,17 @@
+name: 'Install Ansible'
+description: 'An action to install Ansible on a GitHub runner'
+author: 'Prabhat Raghav <prabhat_raghav@outlook.com>'
+runs:
+  using: 'composite'
+  steps:
+    - name: Install Ansible
+      run: |
+        sudo apt-get update -y
+        sudo apt install software-properties-common -y
+        sudo add-apt-repository --yes --update ppa:ansible/ansible
+        sudo apt update -y
+        sudo apt install ansible -y 
+
+    - name: Verify Ansible Installation
+      run: |
+        sudo ansible --version
