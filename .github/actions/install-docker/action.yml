@@ -10,6 +10,7 @@ runs:
   using: 'composite'
   steps:
     - name: Set up Docker repository
+      shell: bash
       run: |
         sudo apt-get update -y
         sudo apt-get install ca-certificates curl -y
@@ -22,6 +23,7 @@ runs:
           sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
     - name: Install Docker Engine
+      shell: bash
       run: |
         sudo apt-get update
         if [ "${{ inputs.docker_version }}" = "latest" ]; then
